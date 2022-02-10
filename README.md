@@ -20,7 +20,7 @@ Create a simple web page that allows users to select different recipes to choose
   - Deciding on what topic to choose from and API's
 
 #### Successes:
-  - * (to be determined)
+* (to be determined)
 
 ## Directions for the Future
 - Create a link to view a video of each recipe.
