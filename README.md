@@ -1,5 +1,5 @@
 # Dinner-Around-the-World 🌍
-Create a simple web page that allows users to select different recipes to choose from for valentines day. This app will run in the browser and feature updated HTML and CSS pwered by Jquery.
+Create a simple web page that allows users to select different recipes to choose from for valentines day. This app will run in the browser and feature updated HTML and CSS powered by Jquery.
 
 ### Live Application Link *(placeholder) 👓
 
