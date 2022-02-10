@@ -3,13 +3,13 @@ Create a simple web page that allows users to select different recipes to choose
 
 ### Live Application Link *(placeholder) 👓
 
-###Built With 🔨🧰
--[x] HTML
--[x] CSS
--[x] Javascript
--[x] jQuery
--[x] AJAX*(not sure if we're using this)
-API's (i will add when we have them)
+## Built With 🔨 🧰
+#### Technology
+- HTML
+- CSS
+- jQuery
+- AJAX
+- APIs (The Cocktail DB and Edamam)
 
 #### Tasks and roles:
 - Front-End: Adam, Tony, Abi & Deandria
