@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Project 1</title>
 </head>
 <body>
     <header>
 
-        <h1 class="title">Dinner Around The World!</h1>
+        <h1 class="title">Dinner Around The World!</h1> 
 
     </header>
 
@@ -19,90 +20,79 @@
             <h2>Cuisine</h2>
             <ul>
                 <form action="/action_page.php">
-                    <div class="options-container">
-                        <div class="option">
-                          <input
-                            type="radio"
-                            class="radio"
-                            id="food options"
-                            name="category"
-                          />
-                          <label for="food options">Food Options</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Italian" />
-                          <label for class"item"="Italian">Italian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Brazilian" />
-                          <label for="Brazilian">Brazilian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Indian" />
-                          <label for="Indian">Indian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Japanese" />
-                          <label for="Japanese">Japanese</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Mexican" />
-                          <label for="Mexican">Mexican</label>
-                          <br><br>
-                        </div>
-                    </div>
-                    
-                    <input type="submit" value="Recipe">
-                  </form>
-            </ul>
-        </div>
+                    <section class="options-container col s4">
+                <br>
+                            <p>
+                              <label for="Italian">Italian</label>
+                                <input class="with-gap" name="food" type="radio" id="Italian" />
+                            </p>
+                            
+                            <p>
+                              <label for="Brazilian">Brazilian</label>
+                              <input class="with-gap" name="food" type="radio" id="Brazilian" />
+                            </p>
+                            
+                            <p>
+                              <label for="Indian">Indian</label>
+                              <input class="with-gap" name="food" name="Indian" type="radio" id="Indian"  />
+                            </p>
+                            
+                            <p>
+                              <label for="Japanese">Japanese</label>
+                              <input class="with-gap" name="food" type="radio" id="Japanese"  />
+                            </p>
+                            
+                            <p>
+                              <label for="Mexican">Mexican</label>
+                              <input class="with-gap" name="food" type="radio" id="Mexican"  />
+                          </p>
+                          <br>
 
-        <div class="beverage">
-            <h2>Drinks</h2>
-            <form action="/action_page.php">
-                <div class="options-container">
-                    <div class="option">
-                      <input
-                        type="radio"
-                        class="radio"
-                        id="food options"
-                        name="category"
-                      />
-                      <label for="beverage options">Beverage Options</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Brandy" />
-                      <label for="Brandy">Brandy</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Whiskey" />
-                      <label for="Whiskey">Whiskey</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Tequila" />
-                      <label for="Tequila">Tequila</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Gin" />
-                      <label for="Gin">Gin</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Rum" />
-                      <label for="Rum">Rum</label>
-                      <br><br>
-                <input type="submit" value="Cocktail">
-              </form>
+                          <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Recipe
+                          </button>
+                      </section>
+                  </form>
+              </ul>
+          </div>
+
+
+                          <p>
+                            <label for="Brandy">Brandy</label>
+                            <input class="with-gap" name="Random Beverage" type="radio" id="Brandy" />
+                          </p>
+                          
+                          <p>
+                            <label for="Whiskey">Whiskey</label>
+                              <input class="with-gap" name="Random Beverage" type="radio" id="Whiskey" />
+                          </p>
+                          
+                          <p>
+                            <label for="Tequila">Tequila</label>
+                              <input class="with-gap" name="Random Beverage" name="Tequila" type="radio" id="Tequila"  />
+                          </p>
+                          
+                          <p>
+                            <label for="Gin">Gin</label>
+                              <input class="with-gap" name="Random Beverage" type="radio" id="Gin" />
+                          </p>
+                          
+                          <p>
+                            <label for="Rum">Rum</label>
+                            <input class="with-gap" name="Random Beverage" type="radio" id="Rum" />
+                        </p>
+                        <br>
+
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                          Beverage
+
+                        </button>
+                </section>
+
+              </div>
+            </form>
         </div>
+      </div>
     </main>
 
     <figure class="hero">
@@ -110,6 +100,8 @@
 
     </figure>
 
-<script src="assets/script.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/script.js"></script>    
 </body>
 </html>
