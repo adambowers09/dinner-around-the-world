@@ -36,8 +36,7 @@ h2 {
 }
 
 .menu-holder {
-  display: flex;
-  justify-content: space-evenly;
+  padding: 3rem;
   background-image: url("./images/image.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -48,10 +47,12 @@ h2 {
 
 
 .cuisine, .beverage {
-  margin-top: 60px;
+  /* margin-bottom: 22rem; */
+  /* margin-top: 60px; */
   border: 2px solid ghostwhite;
   border-radius: 20px;
   padding: 10px;
+  margin: 5rem;
   
 }
 
@@ -60,4 +61,8 @@ h2 {
   position: relative; 
   opacity: 1; 
   display: block;
+}
+
+.spacer {
+  margin: 5rem;
 }

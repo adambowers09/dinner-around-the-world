@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Project 1</title>
 </head>
@@ -14,8 +15,9 @@
 
     </header>
 
-    <main class="menu-holder" container>
-        <div class="cuisine">
+    <main class="menu-holder">
+      <div class="row">
+        <div class="cuisine col s5 spacer">
             <h2>Cuisine</h2>
             <ul>
                 <form action="/action_page.php">
@@ -51,10 +53,10 @@
               </ul>
           </div>
 
-        <div class="beverage">
+        <div class="beverage col s5 spacer">
             <h2>Drinks</h2>
             <form action="/action_page.php">
-              <div class="row">
+              <div>
                 <section class="options-container col l4">
                 
                       <label for="beverage options">Beverage Options</label>
@@ -84,9 +86,11 @@
 
                         <input type="submit" value="Recipe">
                 </section>
+
               </div>
             </form>
         </div>
+      </div>
     </main>
 
     <figure class="hero">
