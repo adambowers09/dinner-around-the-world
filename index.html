@@ -4,104 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Project 1</title>
 </head>
 <body>
     <header>
 
-        <h1 class="title">Dinner Around The World!</h1>
+        <h1 class="title">Dinner Around The World!</h1> 
 
     </header>
 
-    <main class="menu-holder">
+    <main class="menu-holder" container>
         <div class="cuisine">
             <h2>Cuisine</h2>
             <ul>
                 <form action="/action_page.php">
-                    <div class="options-container">
-                        <div class="option">
-                          <input
-                            type="radio"
-                            class="radio"
-                            id="food options"
-                            name="category"
-                          />
-                          <label for="food options">Food Options</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Italian" />
-                          <label for class"item"="Italian">Italian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Brazilian" />
-                          <label for="Brazilian">Brazilian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Indian" />
-                          <label for="Indian">Indian</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Japanese" />
-                          <label for="Japanese">Japanese</label>
-                        </div>
-              
-                        <div class="option">
-                          <input type="radio" class="radio" id="food" name="category" value="Mexican" />
-                          <label for="Mexican">Mexican</label>
+                    <section class="options-container col l4">
+                
+                          <label for="food options">Food Options</label
+
+                            <p>
+                                <input name="food" type="radio" id="Italian" />
+                                <label for="Italian">Italian</label>
+                            </p>
+                            <p>
+                                <input name="food" type="radio" id="Brazilian" />
+                                <label for="Brazilian">Brazilian</label>
+                            </p>
+                            <p>
+                                <input class="food" name="group1" type="radio" id="Indian"  />
+                                <label for="Indian">Indian</label>
+                            </p>
+                            <p>
+                                <input name="food" type="radio" id="test4" disabled="disabled" />
+                                <label for="Japanese">Japanese</label>
+                            </p>
+                            <p>
+                              <input name="food" type="radio" id="test4" disabled="disabled" />
+                              <label for="Mexican">Mexican</label>
+                          </p>
                           <br><br>
-                        </div>
-                    </div>
-                    
-                    <input type="submit" value="Recipe">
+
+                          <input type="submit" value="Recipe">
+                      </section>
                   </form>
-            </ul>
-        </div>
+              </ul>
+          </div>
 
         <div class="beverage">
             <h2>Drinks</h2>
             <form action="/action_page.php">
-                <div class="options-container">
-                    <div class="option">
-                      <input
-                        type="radio"
-                        class="radio"
-                        id="food options"
-                        name="category"
-                      />
+              <div class="row">
+                <section class="options-container col l4">
+                
                       <label for="beverage options">Beverage Options</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Brandy" />
-                      <label for="Brandy">Brandy</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Whiskey" />
-                      <label for="Whiskey">Whiskey</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Tequila" />
-                      <label for="Tequila">Tequila</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Gin" />
-                      <label for="Gin">Gin</label>
-                    </div>
-          
-                    <div class="option">
-                      <input type="radio" class="radio" id="beverage" name="category" value="Rum" />
-                      <label for="Rum">Rum</label>
-                      <br><br>
-                <input type="submit" value="Cocktail">
-              </form>
+
+
+                          <p>
+                              <input name="beverage" type="radio" id="Brandy" />
+                              <label for="Brandy">Brandy</label>
+                          </p>
+                          <p>
+                              <input name="beverage" type="radio" id="Whiskey" />
+                              <label for="Whiskey">Whiskey</label>
+                          </p>
+                          <p>
+                              <input class="beverage" name="group1" type="radio" id="Indian"  />
+                              <label for="Tequila">Tequila</label>
+                          </p>
+                          <p>
+                              <input name="beverage" type="radio" id="test4" disabled="disabled" />
+                              <label for="Gin">Gin</label>
+                          </p>
+                          <p>
+                            <input name="beverage" type="radio" id="test4" disabled="disabled" />
+                            <label for="Rum">Rum</label>
+                        </p>
+                        <br><br>
+
+                        <input type="submit" value="Recipe">
+                </section>
+              </div>
+            </form>
         </div>
     </main>
 
@@ -110,6 +94,8 @@
 
     </figure>
 
-<script src="assets/script.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/script.js"></script>    
 </body>
 </html>
