@@ -1,34 +1,59 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(5, 152, 197);
+  color: wheat;
+  font-size: 2rem;
+}
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    background-image: url("./images/image.png");
-    background-size: cover;
-    background-position: center;
-    /* margin-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-image: url("./images/image.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 100px; */
 }
+
+
+h2 {
+  text-align: center;
+}
+
 .title {
-    justify-content: center;
-    display: flex;
-    text-align: center;
+  font-size: 7rem;
+  background: linear-gradient(90deg, aquamarine 10%, yellow 15%, ghostwhite 43%, red 30%, aquamarine 75%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 12px transparent;
+  color: #000;
+  font-style: oblique;
 }
 
-main {
-    display: flex;
-    justify-content: space-around;
-    height: 300px;
+.menu-holder {
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 
-.cuisine {
-    margin: 5px;
-    padding: 10px;
+
+
+.cuisine, .beverage {
+  margin-top: 60px;
+  border: 2px solid orange;
+  padding: 10px;
 }
 
-.beverage {
-    margin: 5px;
-    padding: 10px;
+.item {
+  align-items: right;
+  display: none;
 }
 
+.item:hover {
+  display: block;
+}
 
