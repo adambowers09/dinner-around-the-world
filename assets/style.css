@@ -1,3 +1,16 @@
+:root {
+  --shadow-color:0 2px 1px #747474, 
+  -1px 3px 1px #767676,
+  -2px 5px 1px #787878, 
+  -3px 7px 1px #7a7a7a;
+
+  --shadow-color2:  3px 3px 5px 6px #ccc,
+     3px 3px 10px 6px #ccc,
+     3px 3px 5px 6px #ccc;
+    
+}
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -16,15 +29,14 @@ header {
   align-items: center;
   height: 100px;
   margin: 20px 0;
+  
 
  
   /* margin-top: 100px; */
 }
 
 
-h2 {
-  text-align: center;
-}
+
 
 .title {
   font-size: 7rem;
@@ -33,6 +45,7 @@ h2 {
   -webkit-text-stroke: 12px transparent;
   color: #000;
   font-style: oblique;
+  padding: 8px;
 }
 
 .menu-holder {
@@ -52,7 +65,14 @@ h2 {
   border: 2px solid ghostwhite;
   border-radius: 20px;
   padding: 10px;
-  
+  box-shadow: var(--shadow-color2);
+  height: 450px;
+  width: 450px;
+
+}
+
+.cuisine h3, .beverage h3 {
+  text-align: center;
 }
 
 
@@ -60,4 +80,5 @@ h2 {
   position: relative; 
   opacity: 1; 
   display: block;
+  color: blue;
 }
