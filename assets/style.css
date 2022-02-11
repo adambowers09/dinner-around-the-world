@@ -50,6 +50,7 @@ h2 {
 .cuisine, .beverage {
   margin-top: 60px;
   border: 2px solid ghostwhite;
+  border-radius: 20px;
   padding: 10px;
   
 }
