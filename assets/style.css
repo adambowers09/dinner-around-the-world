@@ -18,16 +18,17 @@
 
 body {
   background-color: rgb(5, 152, 197);
-  color: ghostwhite;
+  color: black;
   font-size: 2rem;
  
 }
+
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 150px;
   margin: 20px 0;
   
 
@@ -68,9 +69,12 @@ header {
   box-shadow: var(--shadow-color2);
   height: 450px;
   width: 450px;
+  background-color: rgba(128, 128, 128, 0.774);
+  font-weight: bold;
+  font-size: large;
 
 }
-
+  
 .cuisine h3, .beverage h3 {
   text-align: center;
 }
@@ -84,3 +88,4 @@ header {
   display: block;
   color: blue;
 }
+
