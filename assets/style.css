@@ -25,6 +25,7 @@ body {
 
 
 header {
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,6 @@ header {
 
 
 .title {
-  font-size: 7rem;
   background: linear-gradient(90deg, aquamarine 10%, yellow 15%, ghostwhite 43%, red 30%, aquamarine 75%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 12px transparent;
@@ -50,6 +50,7 @@ header {
 }
 
 .menu-holder {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   background-image: url("./images/image.png");
@@ -72,7 +73,6 @@ header {
   background-color: rgba(128, 128, 128, 0.774);
   font-weight: bold;
   font-size: large;
-
 }
   
 .cuisine h3, .beverage h3 {
@@ -89,3 +89,40 @@ header {
   color: blue;
 }
 
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  opacity: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 980px) {
+  header {
+      position: relative;
+     padding-bottom: 0;
+     justify-content: center; 
+  }  
+
+  header h1 {
+      
+      width: 100%;
+      text-align: center;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+   
+  }
+
+  @media screen and (max-width: 575px) {
+
+    header title {
+      float: none;
+    display: block;
+    text-align: center;
+    }
+
+  
+  }
