@@ -95,6 +95,19 @@ header {
   pointer-events: none;
 }
 
+.drinkCard-img-top {
+  max-width: 100%;
+  position: relative;
+}
+
+.drinkCard {
+  max-width: 100%;
+  margin-top: 20px;
+  position: relative;
+  left: 2px;
+}
+
+
 
 
 @media screen and (max-width: 980px) {
