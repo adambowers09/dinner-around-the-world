@@ -28,6 +28,7 @@ function getDrink() {
                 
             }
             console.log(drink)
+            createCard(drink.drink, drink.image, drink.instructions);
         }
 
 
@@ -88,13 +89,26 @@ function getDrink() {
     });
     
 }
-
-function createCard() {
+var modal = document.querySelector(".modal-content");
+function createCard(title, image, instructions) {
    var div = document.createElement("div"); 
-   var h5 = document.createElement("h5");
+   var h5 = document.createElement("h2");
     var img = document.createElement("img");
    var p = document.createElement("p");
+   h5.setAttribute("class", "drink-title");
+   img.setAttribute("class", "drink-img");
+   p.setAttribute("class", "drinkIns");
+//    div.setAttribute("class", "drink-content");
 
+    div.setAttribute("class", "drinkCard");
+    img.setAttribute("class", "drinkCard-img-top");
+   div.appendChild(img);
+   div.appendChild(h5);
+   div.appendChild(p);
+    img.setAttribute("src", image);
+    h5.textContent = title;
+    p.textContent = instructions;
+    modal.appendChild(div);
 }
 
 
@@ -104,6 +118,23 @@ $(function(){
         getDrink();
         $('.modal').modal();
         $('.modal').modal("open");
+    });
+});
+// clear history
+function clearCard() {
+    var children = document.getElementsByClassName("drinkCard");
+    for (let index = 0; index < children.length; index++) {
+        modal.removeChild(children[index]);
+
+        
+    }
+    console.log(children)
+}
+// activate clear history
+$(function(){
+    $('.modal-close').click(function(){
+        clearCard();
+        
     });
 });
 
