@@ -89,19 +89,23 @@ function getDrink() {
     });
     
 }
+// A reusable function to create a card that renders information about a drink that will be used in a for loop for each
+// element in the data array. 
 var modal = document.querySelector(".modal-content");
 function createCard(title, image, instructions) {
    var div = document.createElement("div"); 
    var h5 = document.createElement("h2");
     var img = document.createElement("img");
    var p = document.createElement("p");
+
+// creaated classes for each element so you can grab them later to be able to clear the modal with the clearCard function
    h5.setAttribute("class", "drink-title");
    img.setAttribute("class", "drink-img");
    p.setAttribute("class", "drinkIns");
-//    div.setAttribute("class", "drink-content");
-
     div.setAttribute("class", "drinkCard");
     img.setAttribute("class", "drinkCard-img-top");
+
+    // made each element a child of the created div with class of drinkCard
    div.appendChild(img);
    div.appendChild(h5);
    div.appendChild(p);
@@ -120,7 +124,7 @@ $(function(){
         $('.modal').modal("open");
     });
 });
-// clear history
+// this function will clear history after you make your drink selection  
 function clearCard() {
     var children = document.getElementsByClassName("drinkCard");
     for (let index = 0; index < children.length; index++) {
@@ -130,7 +134,7 @@ function clearCard() {
     }
     console.log(children)
 }
-// activate clear history
+// this function will activate and clear history
 $(function(){
     $('.modal-close').click(function(){
         clearCard();
