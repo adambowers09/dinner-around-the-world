@@ -1,6 +1,4 @@
-// Global Variables //
-var id = "b9d38e41"
-var key = "99baeb4e4004a0a6ff8f6200b4b90779"
+
 
 
 // Drink Function //
@@ -125,14 +123,18 @@ $(function(){
     });
 });
 // this function will clear history after you make your drink selection  
+// var children = document.getElementsByClassName("drinkCard");
 function clearCard() {
-    var children = document.getElementsByClassName("drinkCard");
-    for (let index = 0; index < children.length; index++) {
-        modal.removeChild(children[index]);
+    modal.innerHTML = "";
+
+    // var children = document.getElementsByClassName("drinkCard");
+    // for (let index = 0; index < children.length; index++) {
+    //     modal.removeChild(children[index]);
+    //     console.log(children[index])
 
         
-    }
-    console.log(children)
+//     }
+//     console.log(children)
 }
 // this function will activate and clear history
 $(function(){
@@ -141,6 +143,16 @@ $(function(){
         
     });
 });
+
+
+var id = "b9d38e41"
+var key = "99baeb4e4004a0a6ff8f6200b4b90779"
+const foodURL = "https://api.edamam.com/api/recipes/v2?type=public&q=";
+const appIDKey = "&app_id=b9d38e41&app_key=99baeb4e4004a0a6ff8f6200b4b90779";
+
+function getRecipe() {
+
+}
 
 
 
