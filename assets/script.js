@@ -105,8 +105,7 @@ function getRecipe() {
         console.log(response.hits)
 
     });
-        // console.log(queryURLdrink);
-        // console.log(response.drinks);
+        
 
 }
 
