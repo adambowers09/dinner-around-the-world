@@ -102,20 +102,78 @@ function getRecipe() {
         type: "GET",
         url: foodURL + ingredient + appIDKey,
     }).then(function(response) {
-        console.log(response.hits)
+        
+        for (let index = 0; index < response.food.length; index++) {
+            const element = response.hits[index];
+            
+            const recipe = {
+                recipe: element.labelRecipe, 
+                image: element.imageRecipe,
+                instructions: element.labelIngrdients,
+                
+            }
+            console.log(Recipe)
+            createCard(food.recipe, food.image, food.ingredients);
+        }
 
     });
         
 
 }
 
+// A reusable function to create a card that renders information about a recipe that will be used in a for loop for each
+// element in the data array. 
+var modal = document.querySelector(".modal-content");
+function createCard(title, image, instructions) {
+   var div = document.createElement("div"); 
+   var h5 = document.createElement("h2");
+    var img = document.createElement("img");
+   var p = document.createElement("p");
+
+// creaated classes for each element so you can grab them later to be able to clear the modal with the clearCard function
+   h5.setAttribute("class", "recipe-title");
+   img.setAttribute("class", "recipe-img");
+   p.setAttribute("class", "recipeIns");
+    div.setAttribute("class", "recipeCard");
+    img.setAttribute("class", "recipeCard-img-top");
+
+    // made each element a child of the created div with class of recipeCard
+   div.appendChild(img);
+   div.appendChild(h5);
+   div.appendChild(p);
+    img.setAttribute("src", image);
+    h5.textContent = title;
+    p.textContent = instructions;
+    modal.appendChild(div);
+}
+
+
+// Function to all the recipe function on click of "Beverage"
 $(function(){
-    $('#get-food').click(function(){
+    $('#saveRecipe').click(function(){
         getRecipe();
         $('.modal').modal();
         $('.modal').modal("open");
     });
 });
+// this function will clear history after you make your recipe selection  
+// var children = document.getElementsByClassName("recipeCard");
+function clearCard() {
+    modal.innerHTML = "";
 
+    // var children = document.getElementsByClassName("recipeCard");
+    // for (let index = 0; index < children.length; index++) {
+    //     modal.removeChild(children[index]);
+    //     console.log(children[index])
 
-
+        
+//     }
+//     console.log(children)
+}
+// this function will activate and clear history
+$(function(){
+    $('.modal-close').click(function(){
+        clearCard();
+        
+    });
+});

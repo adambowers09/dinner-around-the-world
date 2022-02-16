@@ -95,12 +95,12 @@ header {
   pointer-events: none;
 }
 
-.drinkCard-img-top {
+.drinkCard-img-top, .recipe-img-top {
   max-width: 100%;
   position: relative;
 }
 
-.drinkCard {
+.drinkCard, .recipeCard {
   max-width: 100%;
   margin-top: 20px;
   position: relative;
