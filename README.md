@@ -24,9 +24,16 @@ Create a simple web page that allows users to select different recipes to choose
 - Presentation: The entire team!! 😎
 #### Challenges: 
   - Deciding on what topic to choose from and API's
+  - Getting API's to work
+  - Javascript
+  - Collaborating as a group
+  - Lighthoue report / accessibility
 
 #### Successes:
-* (to be determined)
+- Developing working application 
+- Working with API's
+- Overcoming Git merge/conflicts
+- Utilizing Materialize
 
 ## Directions for the Future
 - Create a link to view a video of each recipe.
