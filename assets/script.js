@@ -4,7 +4,7 @@
 // Drink Function //
 function getDrink() {
     var drinkSelection = $("input[name=Random-Beverage]:checked").val();
-    console.log(drinkSelection);
+    
 
     var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkSelection;
 
@@ -13,8 +13,6 @@ function getDrink() {
         type: "GET",
         url: queryURLdrink,
     }).then(function(response) {
-        // console.log(queryURLdrink);
-        // console.log(response.drinks);
 
         for (let index = 0; index < response.drinks.length; index++) {
             const element = response.drinks[index];
@@ -25,7 +23,6 @@ function getDrink() {
                 instructions: element.strInstructions,
                 
             }
-            console.log(drink)
             createCard(drink.drink, drink.image, drink.instructions);
         }
 
@@ -72,14 +69,6 @@ $(function(){
 function clearCard() {
     modal.innerHTML = "";
 
-    // var children = document.getElementsByClassName("drinkCard");
-    // for (let index = 0; index < children.length; index++) {
-    //     modal.removeChild(children[index]);
-    //     console.log(children[index])
-
-        
-//     }
-//     console.log(children)
 }
 // this function will activate and clear history
 $(function(){
@@ -102,78 +91,44 @@ function getRecipe() {
         type: "GET",
         url: foodURL + ingredient + appIDKey,
     }).then(function(response) {
-        
-        for (let index = 0; index < response.food.length; index++) {
+        for (let index = 0; index < response.hits.length; index++) {
             const element = response.hits[index];
-            
             const recipe = {
-                recipe: element.labelRecipe, 
-                image: element.imageRecipe,
-                instructions: element.labelIngrdients,
-                
-            }
-            console.log(Recipe)
-            createCard(food.recipe, food.image, food.ingredients);
+                recipe: element.recipe.label,
+                image: element.recipe.image,
+                ingredients: element.recipe.ingredients,
         }
-
+        // create food card with a spread operator for ingredients array (it copies array)
+        foodRecipe(recipe.recipe, recipe.image, ...recipe.ingredients)
+            }
     });
-        
-
 }
-
-// A reusable function to create a card that renders information about a recipe that will be used in a for loop for each
-// element in the data array. 
-var modal = document.querySelector(".modal-content");
-function createCard(title, image, instructions) {
-   var div = document.createElement("div"); 
-   var h5 = document.createElement("h2");
-    var img = document.createElement("img");
-   var p = document.createElement("p");
-
-// creaated classes for each element so you can grab them later to be able to clear the modal with the clearCard function
-   h5.setAttribute("class", "recipe-title");
-   img.setAttribute("class", "recipe-img");
-   p.setAttribute("class", "recipeIns");
-    div.setAttribute("class", "recipeCard");
-    img.setAttribute("class", "recipeCard-img-top");
-
-    // made each element a child of the created div with class of recipeCard
-   div.appendChild(img);
+$(function(){
+    $("#saveRecipe").click(function(){
+        getRecipe();
+        $(".modal").modal();
+        $(".modal").modal("open");
+    });
+});
+function foodRecipe(title, image, ...ingredients) {
+    var div = document.createElement("div");
+    var h5 = document.createElement("h2");
+    var ul = document.createElement("ul");
+     var img = document.createElement("img");
+     for (let index = 0; index < ingredients.length; index++) {
+         const element = ingredients[index];
+         var li = document.createElement("li");
+        li.textContent = element.text;
+         ul.appendChild(li);
+     }
+     h5.setAttribute("class", "food-title");
+   img.setAttribute("class", "food-img");
+   div.setAttribute("class", "foodCard");
+    img.setAttribute("class", "foodCard-img-top");
+    div.appendChild(img);
    div.appendChild(h5);
-   div.appendChild(p);
+   div.appendChild(ul);
     img.setAttribute("src", image);
     h5.textContent = title;
-    p.textContent = instructions;
     modal.appendChild(div);
 }
-
-
-// Function to all the recipe function on click of "Beverage"
-$(function(){
-    $('#saveRecipe').click(function(){
-        getRecipe();
-        $('.modal').modal();
-        $('.modal').modal("open");
-    });
-});
-// this function will clear history after you make your recipe selection  
-// var children = document.getElementsByClassName("recipeCard");
-function clearCard() {
-    modal.innerHTML = "";
-
-    // var children = document.getElementsByClassName("recipeCard");
-    // for (let index = 0; index < children.length; index++) {
-    //     modal.removeChild(children[index]);
-    //     console.log(children[index])
-
-        
-//     }
-//     console.log(children)
-}
-// this function will activate and clear history
-$(function(){
-    $('.modal-close').click(function(){
-        clearCard();
-        
-    });
-});
