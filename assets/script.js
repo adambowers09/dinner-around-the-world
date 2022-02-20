@@ -14,8 +14,10 @@ function getDrink() {
         url: queryURLdrink,
     }).then(function(response) {
 
-        for (let index = 0; index < response.drinks.length; index++) {
-            const element = response.drinks[index];
+        var rand = Math.floor((Math.random() * response.drinks.length));
+        
+        // for (let index = 0; index < response.drinks.length; index++) {
+            const element = response.drinks[rand];
             
             const drink = {
                 drink: element.strDrink, 
@@ -24,8 +26,8 @@ function getDrink() {
                 
             }
             createCard(drink.drink, drink.image, drink.instructions);
-        }
-
+        // }
+        localStorage.setItem("search", JSON.stringify(drinkSelection))
     });
     
 }
@@ -91,8 +93,12 @@ function getRecipe() {
         type: "GET",
         url: foodURL + ingredient + appIDKey,
     }).then(function(response) {
-        for (let index = 0; index < response.hits.length; index++) {
-            const element = response.hits[index];
+        // for (let index = 0; index < response.hits.length; index++) {
+
+            var rand = Math.floor((Math.random() * response.hits.length));
+        
+
+            const element = response.hits[rand];
             const recipe = {
                 recipe: element.recipe.label,
                 image: element.recipe.image,
@@ -100,7 +106,8 @@ function getRecipe() {
         }
         // create food card with a spread operator for ingredients array (it copies array)
         foodRecipe(recipe.recipe, recipe.image, ...recipe.ingredients)
-            }
+            // }
+            localStorage.setItem("search", JSON.stringify(ingredient))
     });
 }
 $(function(){
