@@ -139,3 +139,16 @@ function foodRecipe(title, image, ...ingredients) {
     h5.textContent = title;
     modal.appendChild(div);
 }
+
+function recentSearch() {
+    if(localStorage.getItem("search")) {
+        console.log("true");
+        var lastSearch = JSON.parse(localStorage.getItem("search"))
+    console.log(lastSearch);
+    }
+    else {
+        return;
+    }
+ 
+}
+recentSearch(); 
