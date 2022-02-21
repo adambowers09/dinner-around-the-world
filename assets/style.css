@@ -1,141 +1,141 @@
 :root {
-  --shadow-color:0 2px 1px #747474, 
-  -1px 3px 1px #767676,
-  -2px 5px 1px #787878, 
-  -3px 7px 1px #7a7a7a;
-
-  --shadow-color2:  3px 3px 5px 6px #ccc,
-     3px 3px 10px 6px #ccc,
-     3px 3px 5px 6px #ccc;
-    
-} 
-
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  background-color: rgb(5, 152, 197);
-  color: black;
-  font-size: 2rem;
- 
-}
-
-
-header {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  margin: 20px 0;
+    --shadow-color:0 2px 1px #747474, 
+    -1px 3px 1px #767676,
+    -2px 5px 1px #787878, 
+    -3px 7px 1px #7a7a7a;
   
-
- 
-  /* margin-top: 100px; */
-}
-
-
-
-
-.title {
-  background: linear-gradient(90deg, aquamarine 10%, yellow 15%, ghostwhite 43%, red 30%, aquamarine 75%);
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 12px transparent;
-  color: #000;
-  font-style: oblique;
-  padding: 8px;
-}
-
-.menu-holder {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-evenly;
-  background-image: url("./images/image.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 900px;
-  
-}
-
-
-
-.cuisine, .beverage {
-  margin-top: 60px;
-  border: 2px solid ghostwhite;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: var(--shadow-color2);
-  height: 450px;
-  width: 450px;
-  background-color: rgba(128, 128, 128, 0.774);
-  font-weight: bold;
-  font-size: large;
-}
-  
-.cuisine h3, .beverage h3 {
-  text-align: center;
-}
-
-
-
-
-[type="radio"]:not(:checked), [type="radio"]:checked {
-  position: relative; 
-  opacity: 1; 
-  display: block;
-  color: blue;
-}
-
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-  opacity: 1;
-  position: absolute;
-  pointer-events: none;
-}
-
-.drinkCard-img-top, .foodCard-img-top {
-  max-width: 100%;
-  position: relative;
-}
-
-.drinkCard, .foodCard {
-  max-width: 100%;
-  margin-top: 20px;
-  position: relative;
-  left: 2px;
-}
-
-
-
-
-@media screen and (max-width: 980px) {
-  header {
-      position: relative;
-     padding-bottom: 0;
-     justify-content: center; 
-  }  
-
-  header h1 {
+    --shadow-color2:  3px 3px 5px 6px #ccc,
+       3px 3px 10px 6px #ccc,
+       3px 3px 5px 6px #ccc;
       
-      width: 100%;
-      text-align: center;
-
+  } 
+  
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
   }
-}
-
-@media screen and (max-width: 768px) {
+  
+  body {
+    background-color: rgb(5, 152, 197);
+    color: black;
+    font-size: 2rem;
    
   }
-
-  @media screen and (max-width: 575px) {
-
-    header title {
-      float: none;
-    display: block;
-    text-align: center;
-    }
-
   
+  
+  header {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin: 20px 0;
+    
+  
+   
+    /* margin-top: 100px; */
   }
+  
+  
+  
+  
+  .title {
+    background: linear-gradient(90deg, aquamarine 10%, yellow 15%, ghostwhite 43%, red 30%, aquamarine 75%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 12px transparent;
+    color: #000;
+    font-style: oblique;
+    padding: 8px;
+  }
+  
+  .menu-holder {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url("./images/image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 900px;
+    
+  }
+  
+  
+  
+  .cuisine, .beverage {
+    margin-top: 60px;
+    border: 2px solid ghostwhite;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: var(--shadow-color2);
+    height: 450px;
+    width: 450px;
+    background-color: rgba(128, 128, 128, 0.774);
+    font-weight: bold;
+    font-size: large;
+  }
+    
+  .cuisine h3, .beverage h3 {
+    text-align: center;
+  }
+  
+  
+  
+  
+  [type="radio"]:not(:checked), [type="radio"]:checked {
+    position: relative; 
+    opacity: 1; 
+    display: block;
+    color: blue;
+  }
+  
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    opacity: 1;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .drinkCard-img-top, .foodCard-img-top {
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .drinkCard, .foodCard {
+    max-width: 100%;
+    margin-top: 20px;
+    position: relative;
+    left: 2px;
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 980px) {
+    header {
+        position: relative;
+       padding-bottom: 0;
+       justify-content: center; 
+    }  
+  
+    header h1 {
+        
+        width: 100%;
+        text-align: center;
+  
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+     
+    }
+  
+    @media screen and (max-width: 575px) {
+  
+      header title {
+        float: none;
+      display: block;
+      text-align: center;
+      }
+  
+    
+    }
