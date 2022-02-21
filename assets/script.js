@@ -1,6 +1,6 @@
 
 
-
+ 
 // Drink Function //
 function getDrink() {
     var drinkSelection = $("input[name=Random-Beverage]:checked").val();
