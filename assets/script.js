@@ -141,7 +141,7 @@ function foodRecipe(title, image, ...ingredients) {
    div.appendChild(h5);
    div.appendChild(ul);
     img.setAttribute("src", image);
-    h5.textContent = title;
+    h5.textContent = title; 
     modal.appendChild(div);
 }
 
