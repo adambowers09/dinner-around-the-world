@@ -19,7 +19,7 @@ function getDrink() {
         // for (let index = 0; index < response.drinks.length; index++) {
             const element = response.drinks[rand];
             
-            const drink = {
+            const drink = { 
                 drink: element.strDrink, 
                 image: element.strDrinkThumb,
                 instructions: element.strInstructions,
