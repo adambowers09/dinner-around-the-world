@@ -86,9 +86,11 @@ var key = "99baeb4e4004a0a6ff8f6200b4b90779"
 const foodURL = "https://api.edamam.com/api/recipes/v2?type=public&q=";
 const appIDKey = "&app_id=b9d38e41&app_key=99baeb4e4004a0a6ff8f6200b4b90779";
 
+// recipe function 
 function getRecipe() {
     var ingredient = $("input[name=food]:checked").val();
 
+    //AJAX call getting each recipe label, image, and ingridients id //
     $.ajax({
         type: "GET",
         url: foodURL + ingredient + appIDKey,
@@ -96,7 +98,10 @@ function getRecipe() {
         // for (let index = 0; index < response.hits.length; index++) {
 
             var rand = Math.floor((Math.random() * response.hits.length));
-        
+
+            if (!ingredient) {
+                return
+            } 
 
             const element = response.hits[rand];
             const recipe = {
